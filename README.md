@@ -1,59 +1,150 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# SPPG Kokrosono (My_MBG Portal)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+**Sistem Pelayanan Pemenuhan Gizi (SPPG) Kokrosono** adalah aplikasi web berbasis Laravel yang dirancang untuk mendukung transparansi dan manajemen program **Makan Bergizi Gratis (MBG)**. Aplikasi ini memfasilitasi publik untuk memantau menu dan gizi, serta memberikan wadah bagi petugas untuk mengelola data operasional harian.
 
-## About Laravel
+![SPPG Landing Page](https://placehold.co/1200x600/e2e8f0/1e293b?text=SPPG+Kokrosono+Preview)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Fitur Utama
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### 1. Halaman Publik (Guest)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- **Hero Section**: Informasi utama branding SPPG Kokrosono.
+- **Menu Hari Ini**: Menampilkan menu spesial hari ini lengkap dengan foto dan detail Informasi Nilai Gizi (AKG).
+- **Riwayat Menu**: Daftar menu 30 hari terakhir dengan fitur **Filter Bulan** dan **Filter Sekolah**.
+- **Layanan Pengaduan**:
+    - Formulir pelaporan masyarakat (bisa anonim).
+    - Daftar laporan publik yang transparan (status & tindak lanjut).
+- **Pojok Edukasi**: Artikel dan video edukasi tentang gizi seimbang.
+- **Tim & Lokasi**: Profil tim ahli gizi dan lokasi kantor pelayanan.
 
-## Learning Laravel
+### 2. Dashboard Admin
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+- **Manajemen User**: CRUD pengguna (Admin, Petugas Gizi, Petugas Pengaduan).
+- **Manajemen Sekolah**: CRUD data sekolah mitra penerima manfaat.
+- **Monitoring (Read-Only)**:
+    - Monitoring Riwayat Menu Global.
+    - Monitoring Laporan Pengaduan Masuk.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 3. Dashboard Petugas Gizi
 
-## Laravel Sponsors
+- **Manajemen Menu**:
+    - Input menu harian dan jadwal penyajian.
+    - **Kalkulator Gizi**: Input detail Kalori, Protein, Karbohidrat, Lemak, dan Serat.
+    - **Target Sekolah**: Penugasan menu ke sekolah tertentu.
+- **Upload Foto**: Manajemen foto dokumentasi menu.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### 4. Dashboard Petugas Pengaduan
 
-### Premium Partners
+- **Manajemen Laporan**:
+    - Melihat laporan masuk dari masyarakat.
+    - Update status laporan (Pending -> Diproses -> Selesai).
+    - Verifikasi bukti foto laporan.
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+---
 
-## Contributing
+## 🛠️ Teknologi yang Digunakan
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- **Backend**: Laravel 12 (PHP 8.2+)
+- **Frontend**: Blade Templates, Alpine.js v3, TailwindCSS v4
+- **Database**: MySQL
+- **Build Tool**: Vite v7
 
-## Code of Conduct
+## Instalasi & Konfigurasi
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Ikuti langkah-langkah berikut untuk menjalankan project di komputer lokal Anda.
 
-## Security Vulnerabilities
+### Prasyarat
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- PHP >= 8.2
+- Composer
+- Node.js & NPM
+- MySQL Server
 
-## License
+### Langkah Instalasi
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+1.  **Clone Repository**
+
+    ```bash
+    git clone https://github.com/username/my-mbg.git
+    cd my-mbg
+    ```
+
+2.  **Install Dependencies**
+
+    ```bash
+    composer install
+    npm install
+    ```
+
+3.  **Konfigurasi Environment**
+    Salin file `.env.example` menjadi `.env` dan sesuaikan koneksi database.
+
+    ```bash
+    cp .env.example .env
+    ```
+
+    Buka file `.env` dan atur:
+
+    ```env
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=db_mbg
+    DB_USERNAME=root
+    DB_PASSWORD=
+    ```
+
+4.  **Generate App Key**
+
+    ```bash
+    php artisan key:generate
+    ```
+
+5.  **Migrasi & Seeding Database**
+    Jalankan migrasi dan isi data awal (User, Sekolah, Menu Dummy).
+
+    ```bash
+    php artisan migrate:fresh --seed
+    ```
+
+6.  **Jalankan Aplikasi**
+    Buka dua terminal terpisah untuk menjalankan server Laravel dan Vite.
+
+    _Terminal 1 (Laravel Server):_
+
+    ```bash
+    php artisan serve
+    ```
+
+    _Terminal 2 (Vite Build Asset):_
+
+    ```bash
+    npm run dev
+    ```
+
+7.  **Akses Aplikasi**
+    Buka browser dan kunjungi: `http://127.0.0.1:8000`
+
+---
+
+## Akun Default (Login)
+
+Gunakan akun berikut untuk masuk ke dashboard sistem:
+
+| Role                  | Email           | Password   |
+| :-------------------- | :-------------- | :--------- |
+| **Admin System**      | `admin@mbg.com` | `password` |
+| **Petugas Gizi**      | `gizi@bg.com`   | `password` |
+| **Petugas Pengaduan** | `aduan@bg.com`  | `password` |
+
+> **Catatan:** Jangan lupa untuk mengganti password default saat pertama kali implementasi di production.
+
+---
+
+## Lisensi
+
+Project ini dilisensikan di bawah [MIT License](LICENSE).
+
+---
+
+_Dibuat untuk UKK RPL 2026 - Paket 3 (Aplikasi Pelaporan Pengaduan Masyarakat & Portal Gizi)_
