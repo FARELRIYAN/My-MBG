@@ -24,8 +24,9 @@ class HomeController extends Controller
         $school = School::first();
         $schools = School::all(); // Keep for history filter just in case
 
-        // 2. Fetch Team Members (Where position is NOT NULL)
+        // 2. Fetch Team Members (Where position is NOT NULL and not default seeders)
         $teamMembers = \App\Models\User::whereNotNull('position')
+            ->whereNotIn('email', ['admin@mbg.com', 'gizi@bg.com', 'aduan@bg.com'])
             ->orderBy('role', 'asc')
             ->get();
 
